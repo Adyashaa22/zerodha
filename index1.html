@@ -1,0 +1,304 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Stock Dashboard
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+        }
+        .header .market-info {
+            display: flex;
+            gap: 20px;
+        }
+        .header .market-info div {
+            color: #333;
+        }
+        .header .market-info div span {
+            color: red;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .header .user-info img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
+        .header .user-info span {
+            color: #333;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 50px);
+        }
+        .sidebar {
+            width: 300px;
+            background-color: white;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        .sidebar .search {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .sidebar .search input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .sidebar .stocks {
+            padding: 10px;
+        }
+        .sidebar .stocks .stock {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .sidebar .stocks .stock span {
+            color: #333;
+        }
+        .sidebar .stocks .stock .price {
+            color: green;
+        }
+        .sidebar .stocks .stock .price.down {
+            color: red;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            background-color: white;
+        }
+        .main-content .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .main-content .chart-header .chart-controls {
+            display: flex;
+            gap: 10px;
+        }
+        .main-content .chart-header .chart-controls button {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            background-color: white;
+            cursor: pointer;
+        }
+        .main-content .chart {
+            height: 400px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        .main-content .chart img {
+            width: 100%;
+            height: 100%;
+        }
+        .main-content .chart-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .main-content .chart-footer .timeframes {
+            display: flex;
+            gap: 10px;
+        }
+        .main-content .chart-footer .timeframes button {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            background-color: white;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+  <div class="header">
+   <div class="market-info">
+    <div>
+     NIFTY 50
+     <span>
+      23727.65 -25.80 (-0.11%)
+     </span>
+    </div>
+    <div>
+     SENSEX
+     <span>
+      78472.87 -67.30 (-0.09%)
+     </span>
+    </div>
+   </div>
+   <div class="user-info">
+    <span>
+     KIG242
+    </span>
+    <img alt="User profile picture" height="30" src="https://storage.googleapis.com/a1aa/image/VCFjn5PeXaQuUKghHK4EvA40tQcyaOOBaoa6LiBuO3SKneCUA.jpg" width="30"/>
+   </div>
+  </div>
+  <div class="container">
+   <div class="sidebar">
+    <div class="search">
+     <input placeholder="Search eg: infy bse, nifty fut, index fund, etc" type="text"/>
+    </div>
+    <div class="stocks">
+     <div class="stock">
+      <span>
+       GOLDBEES
+      </span>
+      <span class="price down">
+       63.68
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       HDFCBANK
+      </span>
+      <span class="price down">
+       1798.10
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       HINDUNILVR
+      </span>
+      <span class="price down">
+       2335.55
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       INFY
+      </span>
+      <span class="price down">
+       1909.05
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       ONGC
+      </span>
+      <span class="price down">
+       238.95
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       TCS
+      </span>
+      <span class="price">
+       4179.50
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       NIFTY 50
+      </span>
+      <span class="price down">
+       23727.65
+      </span>
+     </div>
+     <div class="stock">
+      <span>
+       NIFTYETF
+      </span>
+      <span class="price down">
+       253.31
+      </span>
+     </div>
+    </div>
+   </div>
+   <div class="main-content">
+    <div class="chart-header">
+     <div>
+      NIFTY 50
+     </div>
+     <div class="chart-controls">
+      <button>
+       <i class="fas fa-chart-bar">
+       </i>
+      </button>
+      <button>
+       30m
+      </button>
+      <button>
+       Views
+      </button>
+      <button>
+       Studies
+      </button>
+      <button>
+       Layout
+      </button>
+      <button>
+       Events
+      </button>
+      <button>
+       <i class="fas fa-cog">
+       </i>
+      </button>
+      <button>
+       <i class="fas fa-pencil-alt">
+       </i>
+      </button>
+     </div>
+    </div>
+    <div class="chart">
+     <img alt="Stock chart" height="400" src="https://storage.googleapis.com/a1aa/image/q9fLMgFj4LRCF6LEZSKDnD3u72s44pQgK32x1uDOrOfWO9CUA.jpg" width="800"/>
+    </div>
+    <div class="chart-footer">
+     <div class="timeframes">
+      <button>
+       1D
+      </button>
+      <button>
+       5D
+      </button>
+      <button>
+       1M
+      </button>
+      <button>
+       3M
+      </button>
+      <button>
+       6M
+      </button>
+      <button>
+       YTD
+      </button>
+      <button>
+       1Y
+      </button>
+      <button>
+       5Y
+      </button>
+      <button>
+       All
+      </button>
+     </div>
+     <div>
+      Chg. -3.62%
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

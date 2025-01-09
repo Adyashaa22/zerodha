@@ -1,0 +1,157 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Stock Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <div class="header">
+        <div class="market-info">
+            <div>
+                NIFTY 50
+                <span>23727.65 -25.80 (-0.11%)</span>
+            </div>
+            <div>
+                SENSEX
+                <span>78472.87 -67.30 (-0.09%)</span>
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <a href="#">Dashboard</a>
+            <a href="#">Orders</a>
+            <a href="#">Holdings</a>
+            <a href="#">Positions</a>
+            <a href="#">Bids</a>
+            <a href="#">Funds</a>
+            <div class="notification-button">
+                <i class="fas fa-bell"></i>
+                <div class="badge">3</div>
+            </div>
+        </div>
+        <div class="user-info">
+            <span>KIG242</span>
+            <img alt="User   Avatar" height="30" src="https://storage.googleapis.com/a1aa/image/ath1EyUGSfREPiyZ5ZrBAkAUN83QfTQ1qGsCOhDhYXqCleGoA.jpg" width="30"/>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="search-bar">
+                <input placeholder="Search eg: infy bse, nifty fut, index fund, etc" type="text"/>
+            </div>
+            <ul class="stock-list">
+                <li>
+                    <a href="#">GOLDBEES</a>
+                    <span class="stock-change">-0.29 -0.45%</span>
+                    <span class="stock-price">63.68</span>
+                </li>
+                <li>
+                    <a href="#">HDFCBANK</a>
+                    <span class="stock-change">-2.90 -0.16%</span>
+                    <span class="stock-price">1798.10</span>
+                </li>
+                <li>
+                    <a href="#">HINDUNILVR</a>
+                    <span class="stock-change">-3.35 -0.14%</span>
+                    <span class="stock-price">2335.55</span>
+                </li>
+                <li>
+                    <a href="#">INFY</a>
+                    <span class="stock-change">-15.25 -0.79%</span>
+                    <span class="stock-price">1909.05</span>
+                </li>
+                <li>
+                    <a href="#">ONGC</a>
+                    <span class="stock-change">-1.90 -0.79%</span>
+                    <span class="stock-price">238.95</span>
+                </li>
+                <li>
+                    <a href="#">TCS</a>
+                    <span class="stock-change">21.20 0.51%</span>
+                    <span class="stock-price">4179.50</span>
+                </li>
+                <li>
+                    <a href="#">NIFTY 50</a>
+                    <span class="stock-change">-25.80 -0.11%</span>
+                    <span class="stock-price">23727.65</span>
+                </li>
+                <li>
+                    <a href="#">NIFTYETF</a>
+                    <span class="stock-change">-0.38 -0.15%</span>
+                    <span class="stock-price">253.31</span>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <div class="chart-header">
+                <div class="chart-title">NIFTY 50</div>
+                <div class="chart-controls">
+                    <select>
+                        <option value="1m">1m</option>
+                        <option value="2m">2m</option>
+                        <option value="3m">3m</option>
+                        <option value="4m">4m</option>
+                        <option value="5m">5m</option>
+                        <option value="10m">10m</option>
+                        <option value="15m">15m</option>
+                        <option value="30m">30m</option>
+                        <option disabled>──────────</option>
+                        <option value="1h">1h</option>
+                        <option value="2h">2h</option>
+                        <option value="3h">3h</option>
+                        <option value="4h">4h</option>
+                        <option disabled>──────────</option>
+                        <option value="1D">1D</option>
+                        <option value="1W">1W</option>
+                        <option value="1Mo">1Mo</option>
+                        <option value="Custom">Custom</option>
+                    </select>
+                    <input placeholder="Enter Symbol" type="text"/>
+                    <div class="chart-dropdown">
+                        <button class="dropdown-btn">
+                            <i class="fas fa-chart-bar"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#">Line Chart</a>
+                            <a href="#">Bar Chart</a>
+                            <a href="#">Candlestick Chart</a>
+                        </div>
+                    </div>
+                    <div class="chart-dropdown">
+                        <select>
+                            <option value="views">Views</option>
+                            <option value="view1">View 1</option>
+                            <option value="view2">View 2</option>
+                        </select>
+                    </div>
+                    <div class="chart-dropdown">
+                        <select>
+                            <option value="studies">Studies</option>
+                            <option value="study1">Study 1</option>
+                            <option value="study2">Study 2</option>
+                        </select>
+                    </div>
+                    <div class="chart-dropdown">
+                        <select>
+                            <option value="layout">Layout</option>
+                            <option value="layout1">Layout 1</option>
+                            <option value="layout2">Layout 2</option>
+                        </select>
+                    </div>
+                    <div class="chart-dropdown">
+                        <select>
+                            <option value="events">Events</option>
+                            <option value="event1">Event 1</option>
+                            <option value="event2">Event 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="chart">
+                <img alt="Stock Chart" height="400" src="https://storage.googleapis.com/a1aa/image/bVaUXQ7aiq4iCxv4f99A2oK56qTHc9cICUA7CLM5TqKiSvBKA.jpg" width="800"/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
